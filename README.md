@@ -1,4 +1,4 @@
-# Springboot_Angular_ProductMgm_Crud (Backend part)
+# Springboot_Angular_ProductMgm_Crud (Frontend part)
 
 Micro Services with Spring Boot JPA & Angular / Bootstrap
 
