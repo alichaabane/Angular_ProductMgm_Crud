@@ -1,0 +1,36 @@
+<div class="container py-3 px-3">
+  <div class="text-center m-3 text-decoration-underline p-3">
+    <span class="font-weight-bold"
+          style="font-size: 25px; font-weight: bold"> Ajouter un produit :  </span>
+  </div>
+  <div class="mb-3 mt-3">
+    <form [formGroup]="produitForm" (ngSubmit)="addProduct()">
+      <div class="row align-items-center">
+
+        <div class="mb-3">
+          <label for="designation" class="form-label">Designation : </label>
+          <input formControlName="designation" type="text" class="form-control" id="designation">
+        </div>
+
+        <div class="mb-3">
+          <label for="prix" class="form-label">Prix : </label>
+          <input formControlName="prix" type="number"  class="form-control" id="prix">
+        </div>
+
+        <div class="mb-3">
+          <label for="date" class="form-label">Date : </label>
+          <input formControlName="date" type="text" class="form-control" id="date">
+        </div>
+
+        <div class="mt-2 mb-2">
+          <button type="submit" class="m-2 btn btn-primary">
+            Ajouter <i class="fa fa-edit"></i>
+          </button>
+          <button [routerLink]="'/'" type="submit" class="m-2 btn btn-secondary">
+            Retour <i class="fa fa-solid fa-angle-left"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

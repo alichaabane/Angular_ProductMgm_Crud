@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/bootstrap";
+// regular style toast
+@import '~ngx-toastr/toastr';
+
+.swal2-close:focus {
+  box-shadow: none;
+
+}
