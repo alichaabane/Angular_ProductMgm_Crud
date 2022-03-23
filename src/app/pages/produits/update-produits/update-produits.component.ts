@@ -60,7 +60,7 @@ export class UpdateProduitsComponent implements OnInit, AfterContentChecked {
     })
   }
 
-  updateProduct() {
+  onUpdateProduct() {
     this.submitted = true;
     this.produit = {
       reference: this.reference,
@@ -68,7 +68,7 @@ export class UpdateProduitsComponent implements OnInit, AfterContentChecked {
       prix: this.produitForm.get('prix')?.value,
       date: this.produitForm.get('date')?.value
     };
-    this.produitsService.updateProduit(this.produit).subscribe({
+    this.produitsService.updateProduit(this.reference, this.produit).subscribe({
       next: res => {
         if (res) {
           this.toastrService.success('le produit N° ' + this.reference + 'est mise à jour avec succès !');

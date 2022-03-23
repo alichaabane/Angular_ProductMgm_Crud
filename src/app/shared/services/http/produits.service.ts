@@ -24,19 +24,19 @@ export class ProduitsService {
   }
 
   public getProduit(ref: number) {
-    return this.httpClient.get<any>(this.API + `getProduit?ref=${ref}`);
+    return this.httpClient.get<any>(this.API + `getProduit/${ref}`);
   }
 
-  public deleteProduit(ref: number) {
-    return this.httpClient.delete<any>(this.API + `delete?reference=${ref}`);
+  public deleteProduit(reference: number) {
+    return this.httpClient.delete<any>(this.API + `delete/${reference}`);
   }
 
-  public updateProduit(produit: any) {
-    return this.httpClient.put<any>(this.API + `update?reference=${produit.reference}&designation=${produit.designation}&prix=${produit.prix}&date=${produit.date}`, produit);
+  public updateProduit(reference: number, produit: any) {
+    return this.httpClient.put<any>(this.API + `update/${reference}`, produit);
   }
 
   public saveProduit(produit: any) {
-    return this.httpClient.post<any>(this.API + `save?designation=${produit.designation}&prix=${produit.prix}&date=${produit.date}`, produit);
+    return this.httpClient.post<any>(this.API + `save`, produit);
   }
 
 }
