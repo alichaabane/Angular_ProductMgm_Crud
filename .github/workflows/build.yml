@@ -1,4 +1,4 @@
-name: Build
+sonar-scanner.bat -D"sonar.projectKey=ProductManagement" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.login=47d9325cf4ff04e70cf3aa7b1247fd2da91b185e"name: Build
 on:
   push:
     branches:
