@@ -12,10 +12,10 @@
       </div>
       <div class="mt-2 mb-2">
         <button (click)=" getProduitsParMotCle() " class="btn btn-primary">
-          Chercher <i class="fa fa-search"></i>
+          Chercher <em class="fa fa-search"></em>
         </button>
         <button [routerLink]="'/add'" class="m-1 btn btn-success">
-          Ajouter un produit <i class="fa fa-edit"></i>
+          Ajouter un produit <em class="fa fa-edit"></em>
         </button>
       </div>
     </form>
@@ -40,10 +40,10 @@
         <td>
           <div class="justify-content-center">
             <div class="d-inline-block">
-              <i (click)="deleteProduits(produit)" class="fa fa-trash m-1" style="color: red; font-size: 18px"></i>
+              <em (click)="deleteProduits(produit)" class="fa fa-trash m-1" style="color: red; font-size: 18px"></em>
             </div>
             <div class="d-inline-block">
-              <i (click)="updateProduit(produit)" class="fa fa-edit m-1" style="color: deepskyblue; font-size: 18px"></i>
+              <em (click)="updateProduit(produit)" class="fa fa-edit m-1" style="color: deepskyblue; font-size: 18px"></em>
             </div>
           </div>
         </td>
