@@ -25,8 +25,7 @@ export class ProduitsComponent implements OnInit {
     this.getProduitsParMotCle();
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   goToPage(page: any) {
     this.currentPage = page;
@@ -76,7 +75,6 @@ export class ProduitsComponent implements OnInit {
           this.produits = result.data;
           this.totalPages = result.totalPages || 0;
           this.pages = new Array(this.totalPages);
-          console.log(this.pages);
       }
     }, error => {
       console.log(error);
