@@ -59,7 +59,7 @@ export class ProduitsComponent implements OnInit {
   getProduits(): void {
     this.produitsService.getProduits().subscribe(result => {
       if (result) {
-        this.produits = result;
+        this.produits = result.data;
         this.totalPages = result.totalPages || 0;
         this.pages = new Array(this.totalPages);
       }
@@ -73,10 +73,10 @@ export class ProduitsComponent implements OnInit {
     this.produitsService.getProduitsParMC(this.motCle, this.currentPage).pipe().subscribe(result => {
       if (result) {
         console.log(result);
-          this.produits = result.content;
+          this.produits = result.data;
           this.totalPages = result.totalPages || 0;
           this.pages = new Array(this.totalPages);
-          console.log(this.produits);
+          console.log(this.pages);
       }
     }, error => {
       console.log(error);

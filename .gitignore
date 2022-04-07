@@ -76,7 +76,9 @@ typings/
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
-
+.scannerwork
+/.idea
+.idea/sonarlint/issuestore/index.pb
 # Next.js build output
 .next
 

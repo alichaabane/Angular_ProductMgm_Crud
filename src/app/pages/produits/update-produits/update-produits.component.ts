@@ -3,6 +3,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {ProduitsService} from "../../../shared/services/http/produits.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {ToastrService} from "ngx-toastr";
+import {Produits} from "../../../shared/models/Produits";
 
 @Component({
   selector: 'app-update-produits',
@@ -13,7 +14,7 @@ export class UpdateProduitsComponent implements OnInit, AfterContentChecked {
 
   produitForm: FormGroup;
   submitted = false;
-  produit: any = null;
+  produit: any;
   reference: number = 1;
 
   constructor(private fb: FormBuilder, private produitsService: ProduitsService,
@@ -25,6 +26,7 @@ export class UpdateProduitsComponent implements OnInit, AfterContentChecked {
       prix: ['', Validators.required],
       date: [new Date().getDate() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getFullYear(), Validators.required]
     });
+    this.initForm();
   }
 
   ngOnInit(): void {
@@ -71,7 +73,7 @@ export class UpdateProduitsComponent implements OnInit, AfterContentChecked {
     this.produitsService.updateProduit(this.reference, this.produit).subscribe({
       next: res => {
         if (res) {
-          this.toastrService.success('le produit N° ' + this.reference + 'est mise à jour avec succès !');
+          this.toastrService.success('le produit N° ' + this.reference + ' est mise à jour avec succès !');
           console.log("update product !");
           this.router.navigate(['/']);
         }

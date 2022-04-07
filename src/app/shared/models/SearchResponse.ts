@@ -1,10 +1,10 @@
 export class SearchResponse<T> {
-  content: T[];
+  data: T[];
   totalRecords: number;
   totalPages?: number;
 
-  public constructor(content: T[], totalRecords: number, totalPages: number) {
-    this.content = content;
+  public constructor(data: T[], totalRecords: number, totalPages: number) {
+    this.data = data;
     this.totalRecords = totalRecords;
     this.totalPages = totalPages;
   }
