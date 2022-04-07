@@ -1,9 +1,8 @@
-import {AfterContentChecked, AfterContentInit, AfterViewInit, Component, OnInit} from '@angular/core';
+import {AfterContentChecked, Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {ProduitsService} from "../../../shared/services/http/produits.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {ToastrService} from "ngx-toastr";
-import {Produits} from "../../../shared/models/Produits";
 
 @Component({
   selector: 'app-update-produits',
